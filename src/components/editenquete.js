@@ -445,15 +445,12 @@ function EditEnquete() {
 												</td>
 													<td>
 													<div className="btn btn-primary">
-													<div
-														className="form-check text-center"
-														title="Switcher de ferme"
-													>
+													
 														{rendered(val._id)}
 													<Link to="/pages/dashboard/enquete/question">
 														<span className="btnO btn-primary px-3">Voir</span>
 													</Link>
-													</div>
+													
 													</div>
 													</td>
 											</tr>
