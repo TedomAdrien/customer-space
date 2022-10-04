@@ -12,6 +12,7 @@ function Question() {
 	const [profil, setProfil] = useState([]);
 	const [enqueteId, setenqueteId] = useState(JSON.parse(window.localStorage.getItem("enqueteId")));
 
+	const [status, setStatus] = useState(1);
 	const [question1, setQuestion1] = useState("");
 	const [question2, setQuestion2] = useState("");
 	const [question3, setQuestion3] = useState("");
@@ -57,7 +58,7 @@ function Question() {
 						question3,
 						question4,
 						question5,
-
+						status,
 					}),
 				})
 					.then((res) => res.json())
