@@ -94,7 +94,7 @@ function Question() {
 	const getQuestions = () => {
 		Axios.get(`https://customer-space.herokuapp.com/api/question/all/${enqueteId}`).then((response) => {
 			setQuestionList(response.data);
-			response.data.forEach(data => {console.log(data),
+			response.data.forEach(data => {console.log(data);
 				if(data.status===1){
 					window.localStorage.setItem(
 						"questionId",
