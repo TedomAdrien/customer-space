@@ -28,9 +28,9 @@ function Dashboard() {
 			})
 		
 	}
-	// useEffect(() => {
-    //     getProfilUser();
-    // }, [])
+	useEffect(() => {
+        getProfilUser();
+    }, [])
 
 	const getEnquetesLength = () => {
 		Axios.get("https://customer-space.herokuapp.com/app/enquete").then(
