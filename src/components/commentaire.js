@@ -37,9 +37,9 @@ function Commentaire() {
 		});
 	};
 
-    // useEffect(() => {
-    //     getQuestions();
-    // }, [])
+    useEffect(() => {
+        getQuestions();
+    }, [])
 	
 	return (
     <div>
