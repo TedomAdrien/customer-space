@@ -65,25 +65,26 @@ function Question() {
 					.then((data) => {
 						if (data.message) {
 							alert("question créée avec succès");
-							//initialiser le enqueteId pour les requette qui en aurons besoin
-							fetch(`https://customer-space.herokuapp.com/api/question/all/${enqueteId}`, {
+							// //initialiser le enqueteId pour les requette qui en aurons besoin
+							// fetch(`https://customer-space.herokuapp.com/api/question/all/${enqueteId}`, {
 
-								headers: {
-									Authorization: `Bearer ${JSON.parse(
-										window.localStorage.getItem("userToken")
-									)}`,
-								},
-							}).then((res) => {
-								res.json().then((questions) => {
+							// 	headers: {
+							// 		Authorization: `Bearer ${JSON.parse(
+							// 			window.localStorage.getItem("userToken")
+							// 		)}`,
+							// 	},
+							// }).then((res) => {
+							// 	res.json().then((questions) => {
 			
-									window.localStorage.setItem(
-										"questionId",
-										JSON.stringify(questions[0]._id)
-									);
+							// 		window.localStorage.setItem(
+							// 			"questionId",
+							// 			JSON.stringify(questions[0]._id)
+							// 		);
 									//tout s'est bien derouler
-								window.location.href = "./question";
-								});
-							});
+							// 	});
+							// });
+							getQuestions();
+							window.location.href = "./question";
 						} else {
 							alert("Echec lors de la création de vos questions");
 						}
