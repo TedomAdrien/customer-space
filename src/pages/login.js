@@ -26,7 +26,7 @@ export default class Login extends Component {
 		const { email, password } = this.state;
 		if (email === "" || password === "") alert("Un champ est vide");
 		else {
-			fetch("http://localhost:3600/api/auth/login", {
+			fetch("https://customer-space.herokuapp.com/api/auth/login", {
 				method: "POST",
 				crossDomain: true,
 				headers: {
