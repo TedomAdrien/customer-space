@@ -27,7 +27,7 @@ function Question() {
 	
 
 	const getProfilUser = () =>{
-		Axios.get(`http://localhost:3600/api/auth/show/${userId}`)
+		Axios.get(`https://customer-space.herokuapp.com/api/auth/show/${userId}`)
 			.then((response) => {
 				setProfil(response.data);
 			})
@@ -39,7 +39,7 @@ function Question() {
 
 	const addQuestion = (e) => {
 		e.preventDefault();
-				fetch("http://localhost:3600/api/question", {
+				fetch("https://customer-space.herokuapp.com/api/question", {
 					method: "POST",
 					crossDomain: true,
 					headers: {
@@ -65,7 +65,7 @@ function Question() {
 						if (data.message) {
 							alert("question créée avec succès");
 							//initialiser le enqueteId pour les requette qui en aurons besoin
-							fetch(`http://localhost:3600/api/question/all/${enqueteId}`, {
+							fetch(`https://customer-space.herokuapp.com/api/question/all/${enqueteId}`, {
 
 								headers: {
 									Authorization: `Bearer ${JSON.parse(
@@ -91,7 +91,7 @@ function Question() {
 		};
 
 	const getQuestions = () => {
-		Axios.get(`http://localhost:3600/api/question/all/${enqueteId}`).then((response) => {
+		Axios.get(`https://customer-space.herokuapp.com/api/question/all/${enqueteId}`).then((response) => {
 			setQuestionList(response.data);
 			response.data.forEach(data => {
 				if(data.status===1){
@@ -192,7 +192,7 @@ function Question() {
 	};
 
 	const checkQuestion = (questionId) => {
-		fetch(`http://localhost:3600/api/question/${questionId}`, {
+		fetch(`https://customer-space.herokuapp.com/api/question/${questionId}`, {
 			headers: {
 				Authorization: `Bearer ${JSON.parse(
 					window.localStorage.getItem("userToken")
@@ -204,7 +204,7 @@ function Question() {
 					"questionId",
 					JSON.stringify(question._id)
 				);
-				fetch(`http://localhost:3600/api/reponse/setstatus/${questionId}`, {
+				fetch(`https://customer-space.herokuapp.com/api/reponse/setstatus/${questionId}`, {
 					headers: {
 						Authorization: `Bearer ${JSON.parse(
 							window.localStorage.getItem("userToken")

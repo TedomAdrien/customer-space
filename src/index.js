@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Axios from 'axios'
 
-Axios.defaults.baseURL='http://localhost:5000';
+Axios.defaults.baseURL="https://customer-space.herokuapp.com";
 Axios.defaults.headers.common["Authorization"] = `Bearer ${JSON.parse(window.localStorage.getItem('userToken'))}`
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

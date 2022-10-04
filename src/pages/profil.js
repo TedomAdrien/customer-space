@@ -14,7 +14,7 @@ const Profil = () => {
 
 
 	const getProfilUser = () =>{
-		Axios.get(`http://localhost:3600/api/auth/show/${userId}`)
+		Axios.get(`https://customer-space.herokuapp.com/api/auth/show/${userId}`)
 			.then((response) => {
 				setProfil(response.data);
 			})

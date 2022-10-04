@@ -22,7 +22,7 @@ function AvisClient() {
         if (reponse1 > 5 || reponse2 > 5 || reponse3 > 5 || reponse4 > 5 || reponse5 > 5)
             alert("Les notes des reponses ne doivent pas etre surperieur a 5");
         else {
-            fetch("http://localhost:3600/api/reponse", {
+            fetch("https://customer-space.herokuapp.com/api/reponse", {
                 method: "POST",
                 crossDomain: true,
                 headers: {
@@ -56,7 +56,7 @@ function AvisClient() {
 
    
  const getQuestions = () => {
-        Axios.get(`http://localhost:3600/api/search/${questionId}`)
+        Axios.get(`https://customer-space.herokuapp.com/api/search/${questionId}`)
         .then((response) => {
             setQuestionList(response.data);
         });

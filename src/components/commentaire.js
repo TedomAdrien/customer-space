@@ -18,7 +18,7 @@ function Commentaire() {
    
 
 	const getProfilUser = () =>{
-		Axios.get(`http://localhost:3600/api/auth/show/${userId}`)
+		Axios.get(`https://customer-space.herokuapp.com/api/auth/show/${userId}`)
 			.then((response) => {
 				// console.log(response.data)
 				setProfil(response.data);
@@ -31,7 +31,7 @@ function Commentaire() {
 	
 
 	const getQuestions = () => {
-		Axios.get(`http://localhost:3600/api/question/${questionId}`).then((response) => {
+		Axios.get(`https://customer-space.herokuapp.com/api/question/${questionId}`).then((response) => {
 			setQuestionList(response.data);
 			// console.log(response.data)
 		});

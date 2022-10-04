@@ -18,7 +18,7 @@ function EditEnquete() {
 
 
 	const getProfilUser = () => {
-		Axios.get(`http://localhost:3600/api/auth/show/${userId}`)
+		Axios.get(`https://customer-space.herokuapp.com/api/auth/show/${userId}`)
 			.then((response) => {
 				setProfil(response.data);
 			})
@@ -33,7 +33,7 @@ function EditEnquete() {
 		if (nom === "")
 			alert("Le champ ne doit pas etre vide");
 		else {
-			fetch("http://localhost:3600/app/enquete", {
+			fetch("https://customer-space.herokuapp.com/app/enquete", {
 				method: "POST",
 				crossDomain: true,
 				headers: {
@@ -53,7 +53,7 @@ function EditEnquete() {
 					if (data.message) {
 						alert("Enquete créée avec succès");
 						//initialiser le enqueteId pour les requette qui en aurons besoin
-						fetch("http://localhost:3600/app/enquete", {
+						fetch("https://customer-space.herokuapp.com/app/enquete", {
 							headers: {
 								Authorization: `Bearer ${JSON.parse(
 									window.localStorage.getItem("userToken")
@@ -77,7 +77,7 @@ function EditEnquete() {
 	};
 
 	const getEnquetes = () => {
-		Axios.get("http://localhost:3600/app/enquete").then(
+		Axios.get("https://customer-space.herokuapp.com/app/enquete").then(
 			(response) => {
 				setEnqueteList(response.data);
 			}
@@ -91,7 +91,7 @@ function EditEnquete() {
 		if (newNom ==="") {
 			alert("Le champs ne doit pas être vide");
 		} else {
-			Axios.put(`http://localhost:3600/app/enquete/${id}`, {
+			Axios.put(`https://customer-space.herokuapp.com/app/enquete/${id}`, {
 				nom: newNom,
 				_id: id,
 			}).then((response) => {
@@ -104,7 +104,7 @@ function EditEnquete() {
 
 
 	const deleteEnquete = (id) => {
-		Axios.delete(`http://localhost:3600/app/enquete/${id}`).then(
+		Axios.delete(`https://customer-space.herokuapp.com/app/enquete/${id}`).then(
 			(response) => {
 				setEnqueteList(
 					enqueteList.filter((val) => {
@@ -118,7 +118,7 @@ function EditEnquete() {
 	};
 
 	const checkEnquete = (enqueteId) => {
-		fetch(`http://localhost:3600/app/enquete/${enqueteId}`, {
+		fetch(`https://customer-space.herokuapp.com/app/enquete/${enqueteId}`, {
 			headers: {
 				Authorization: `Bearer ${JSON.parse(
 					window.localStorage.getItem("userToken")
