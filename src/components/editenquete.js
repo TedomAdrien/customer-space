@@ -445,8 +445,6 @@ function EditEnquete() {
 												</td>
 													<td>
 													<div className="btn btn-primary">
-													
-														{rendered(val._id)}
 													<Link to="/pages/dashboard/enquete/question">
 														<span className="btnO btn-primary px-3">Voir</span>
 													</Link>
