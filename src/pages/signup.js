@@ -24,7 +24,7 @@ export default class SignUp extends Component {
 		else if (password !== passwordConfirmation)
 			alert("Confirmer le mot de passe");
 		else {
-			fetch("http://localhost:3600/api/auth/signup", {
+			fetch("https://customer-space.herokuapp.com/api/auth/signup", {
 				method: "POST",
 				crossDomain: true,
 				headers: {
@@ -45,7 +45,7 @@ export default class SignUp extends Component {
 				.then((data) => {
 					if (data.status) {
 						//une fois inscrit on le login direct
-						fetch("http://localhost:3600/api/auth/login", {
+						fetch("https://customer-space.herokuapp.com/api/auth/login", {
 							method: "POST",
 							crossDomain: true,
 							headers: {
