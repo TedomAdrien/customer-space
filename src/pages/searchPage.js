@@ -13,7 +13,7 @@ function Form() {
         e.preventDefault();
         if (userName === "") alert("Le champ est vide");
         else {
-            fetch("http://localhost:3600/api/search", {
+            fetch("https://customer-space.herokuapp.com/api/search", {
                 method: "POST",
                 crossDomain: true,
                 headers: {
