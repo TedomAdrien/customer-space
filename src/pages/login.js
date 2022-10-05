@@ -67,7 +67,7 @@ export default class Login extends Component {
     <a className="navbar-brand" href="/">
       <img src={Logo} alt="" width="65" height="55" className="d-inline-block align-text-top"/>
     </a>
-        <ol className="breadcrumb d-flex">
+        {/* <ol className="breadcrumb d-flex">
 								<li className="breadcrumb-item">
 									<Link to="/login">Login</Link>
 								</li>
@@ -76,7 +76,7 @@ export default class Login extends Component {
 										Register
 									</Link>
 								</li>
-							</ol>
+			</ol> */}
   </div>
 </nav>
 				<div className="container col-12 mt-2 p-4">
@@ -93,7 +93,7 @@ export default class Login extends Component {
 						className="bg-light mt-2 p-3"
 						style={{ borderRadius: "20px", padding: "50px !important", }}
 					>
-						<h4 className="text-primary text-center">
+						<h4 className="text-center" style={{ color: "red" }}>
 							Connectez vous à votre compte 
 						</h4>
 

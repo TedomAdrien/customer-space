@@ -71,7 +71,7 @@ function AvisClient() {
                 <div className="card">
                     <div className="card-header">
                         <h2>Point de vue Client</h2>
-                        <h6 className="text-primary text-center">
+                        <h6 className="text-center" style={{ color: "red" }}>
                             Noter la qualiter de notre service pour nous aider a nous ameliorer et vous satisfaire.
                         </h6>
                     </div>
@@ -86,78 +86,301 @@ function AvisClient() {
 					</div>
                         <div className="card-body">
                             <div className="table-responsive">
-                                <table className="table table-bordered m-0">
+                                <table class="table table-bordered m-0">
                                     <thead>
                                         <tr>
-                                            <th className="text-center py-3 px-4">Question</th>
-                                            <th className="text-right py-3 px-4" >reponse</th>
+                                            <th class="text-center py-3 px-4" style={{ width: "75%" }}>Question</th>
+                                            <th class="text-right py-3 px-4" >reponse</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td className="p-10">
+                                            <td class="p-10 text-left">
                                                 {data.question1}
 
                                             </td>
-                                            <td className="text-right font-weight-semibold align-middle p-4">
-                                                <input
-                                                    type="number"
-                                                    className="form-control"
-                                                    placeholder=".../5"
-                                                    onChange={(event) => {
-                                                        setReponse1(event.target.value);
-                                                    }} />
+                                            <td class="text-right font-weight-semibold align-middle p-4">
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="1"  
+                                                            onChange={(event) => {
+                                                            setReponse1(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="2"  
+                                                            onChange={(event) => {
+                                                            setReponse1(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input  type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="3"
+                                                            onChange={(event) => {
+                                                            setReponse1(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input  type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="4"
+                                                            onChange={(event) => {
+                                                            setReponse1(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input  type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="5"
+                                                            onChange={(event) => {
+                                                            setReponse1(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td className="p-10">
+                                            <td class="p-10 text-left">
                                                 {data.question2}
                                             </td>
-                                            <td className="text-right font-weight-semibold align-middle p-4"><input
-                                                type="number"
-                                                className="form-control"
-                                                placeholder=".../5"
-                                                onChange={(event) => {
-                                                    setReponse2(event.target.value);
-                                                }} /></td>
+                                            <td class="text-right font-weight-semibold align-middle p-4">
+                                            <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="1"  
+                                                            onChange={(event) => {
+                                                            setReponse2(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="2"  
+                                                            onChange={(event) => {
+                                                            setReponse2(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input  type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="3"
+                                                            onChange={(event) => {
+                                                            setReponse2(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input  type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="4"
+                                                            onChange={(event) => {
+                                                            setReponse2(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input  type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="5"
+                                                            onChange={(event) => {
+                                                            setReponse2(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                </td>
                                         </tr>
                                         <tr>
-                                            <td className="p-10">
+                                            <td class="p-10 text-left">
                                                 {data.question3}
                                             </td>
-                                            <td className="text-right font-weight-semibold align-middle p-4"><input
-                                                type="number"
-                                                className="form-control"
-                                                placeholder=".../5"
-                                                onChange={(event) => {
-                                                    setReponse3(event.target.value);
-                                                }} /></td>
+                                            <td class="text-right font-weight-semibold align-middle p-4">
+                                            <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="1"  
+                                                            onChange={(event) => {
+                                                            setReponse3(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="2"  
+                                                            onChange={(event) => {
+                                                            setReponse3(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input  type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="3"
+                                                            onChange={(event) => {
+                                                            setReponse3(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input  type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="4"
+                                                            onChange={(event) => {
+                                                            setReponse3(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input  type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="5"
+                                                            onChange={(event) => {
+                                                            setReponse3(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                </td>
 
                                         </tr>
                                         <tr>
-                                            <td className="p-10">
+                                            <td class="p-10 text-left">
                                                 {data.question4}
                                             </td>
-                                            <td className="text-right font-weight-semibold align-middle p-4"><input
-                                                type="number"
-                                                className="form-control"
-                                                placeholder=".../5"
-                                                onChange={(event) => {
-                                                    setReponse4(event.target.value);
-                                                }} /></td>
+                                            <td class="text-right font-weight-semibold align-middle p-4">
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="1"  
+                                                            onChange={(event) => {
+                                                            setReponse4(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="2"  
+                                                            onChange={(event) => {
+                                                            setReponse4(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input  type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="3"
+                                                            onChange={(event) => {
+                                                            setReponse4(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input  type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="4"
+                                                            onChange={(event) => {
+                                                            setReponse4(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input  type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="5"
+                                                            onChange={(event) => {
+                                                            setReponse4(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                </td>
 
                                         </tr>
                                         <tr>
-                                            <td className="p-10">
+                                            <td class="p-10 text-left">
                                                 {data.question5}
                                             </td>
-                                            <td className="text-right font-weight-semibold align-middle p-4"><input
-                                                type="number"
-                                                className="form-control"
-                                                placeholder=".../5"
-                                                onChange={(event) => {
-                                                    setReponse5(event.target.value);
-                                                }} /></td>
+                                            <td class="text-right font-weight-semibold align-middle p-4">
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="1"  
+                                                            onChange={(event) => {
+                                                            setReponse5(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="2"  
+                                                            onChange={(event) => {
+                                                            setReponse5(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input  type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="3"
+                                                            onChange={(event) => {
+                                                            setReponse5(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input  type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="4"
+                                                            onChange={(event) => {
+                                                            setReponse5(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input  type="checkbox" 
+                                                            class="form-check-input" 
+                                                            value="5"
+                                                            onChange={(event) => {
+                                                            setReponse5(event.target.value);
+                                                                }}/>
+                                                </label>
+                                                </div>
+                                                </td>
 
                                         </tr>
                                     </tbody>

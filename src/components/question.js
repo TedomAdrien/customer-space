@@ -302,7 +302,7 @@ function Question() {
 													<UncontrolledDropdown nav>
 														<DropdownToggle className="pr-0" nav>
 														<Media className="ml-2 d-none d-lg-block">
-																		<span className="mb-0 text-sm font-weight-bold">
+																		<span className="mb-0 text-sm font-weight-bold" style={{ color: "red" }}>
 																			{profil.nom}
 																		</span>
 																	</Media>
@@ -368,7 +368,7 @@ function Question() {
         					</nav>
 							<div className="container-fluid">
 								<div className="d-sm-flex align-items-center justify-content-between mb-4">
-									<h1 className="h3 mb-0 text-gray-800">Questions</h1>
+									<h1 className="h3 mb-0 text-gray-800">Question(s)</h1>
 								</div>
 							</div>
         
@@ -508,15 +508,16 @@ function Question() {
 													/>
 												</div>
 
-												<button type="submit" className="btn btn-success">
-													Ajouter
-												</button>
+												
 												<button
 													style={{ marginLeft: "10px" }}
-													className="btn btn-primary"
+													className="btn btn-success"
 													onClick={close}
 												>
 													Fermer
+												</button>
+												<button type="submit" className="btn btn-success">
+													Ajouter
 												</button>
 											</form>
 										</div>
@@ -528,7 +529,7 @@ function Question() {
 								<table className="table table-striped">
 									<thead>
 										<tr>
-											<th className="text-center"> Selectionner <br/> Question</th>
+											<th className="text-center"> Activer le <br/> Questionnaire</th>
 											<th className="text-center"> Q1 </th>
 											<th className="text-center"> Q2 </th>
 											<th className="text-center"> Q3 </th>
@@ -712,7 +713,7 @@ function Question() {
 														</Popup>
 													</div>
 												</td>
-												<td className="text-center">
+												{/* <td className="text-center">
 													<Popup
 														trigger={
 															<div className="">
@@ -755,7 +756,7 @@ function Question() {
 															</div>
 														)}
 													</Popup>
-												</td>
+												</td> */}
 											</tr>
 										))}
 									</tbody>

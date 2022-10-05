@@ -171,7 +171,7 @@ function EditEnquete() {
 						<div className="sidebar-brand-icon rotate-n-15">
 							<i className="fas fa-laugh-wink"></i>
 						</div>
-						<div className="sidebar-brand-text mx-3">Customer Services</div>
+						<div className="sidebar-brand-text mx-3">Customer Spaces</div>
 					</a>
 					<hr className="sidebar-divider my-0"/>
 					<li className="nav-item active">
@@ -218,7 +218,7 @@ function EditEnquete() {
 															<ul className="navbar-nav navbar-nav-right">
 																<Media className="align-items-center">
 																	<Media className="ml-2 d-none d-lg-block">
-																		<span className="mb-0 text-sm font-weight-bold">
+																		<span className="mb-0 text-sm font-weight-bold" style={{ color: "red" }}>
 																			{profil.nom}
 																		</span>
 																	</Media>
@@ -281,7 +281,7 @@ function EditEnquete() {
         					</nav>
 							<div className="container-fluid">
 								<div className="d-sm-flex align-items-center justify-content-between mb-4">
-									<h1 className="h3 mb-0 text-gray-800">Enquetes</h1>
+									<h1 className="h3 mb-0 text-gray-800">Enquete(s)</h1>
 								</div>
 							</div>
         
@@ -322,15 +322,16 @@ function EditEnquete() {
 						/>
 					</div>
 					
-					<button type="submit" className="btn btn-success">
-						Ajouter
-					</button>
+					
 					<button
 						style={{ marginLeft: "10px" }}
 						className="btn btn-primary"
 						onClick={close}
 					>
 						Fermer
+					</button>
+					<button type="submit" className="btn btn-success">
+						Ajouter
 					</button>
 				</form>
 			</div>
@@ -341,7 +342,7 @@ function EditEnquete() {
 								<table className="table table-striped">
 									<thead>
 										<tr>
-											<th> Selectionner <br/> Enquete</th>
+											<th> Enquete <br/> encours</th>
 											<th> Nom </th>
 											<th> Action </th>
 											<th> Question </th>

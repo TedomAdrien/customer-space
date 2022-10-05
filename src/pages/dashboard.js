@@ -79,7 +79,7 @@ function Dashboard() {
 						<div className="sidebar-brand-icon rotate-n-15">
 							<i className="fas fa-laugh-wink"></i>
 						</div>
-						<div className="sidebar-brand-text mx-3">Customer Services</div>
+						<div className="sidebar-brand-text mx-3">Customer Spaces</div>
 					</a>
 					<hr className="sidebar-divider my-0"/>
 					<li className="nav-item active">
@@ -126,7 +126,7 @@ function Dashboard() {
 															<ul className="navbar-nav navbar-nav-right">
 																<Media className="align-items-center">
 																<Media className="ml-2 d-none d-lg-block">
-																		<span className="mb-0 text-sm font-weight-bold">
+																		<span className="mb-0 text-sm font-weight-bold" style={{ color: "red" }}>
 																			{profil.nom}
 																		</span>
 																	</Media>
@@ -192,17 +192,17 @@ function Dashboard() {
                             <div className="d-sm-flex align-items-center justify-content-between mb-4">
                                 <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
                                 <a href="dashboard/enquete" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                        className="fas fa-download fa-sm text-white-50"></i> Nouvelle Enquete</a>       
+                                        className="fas fa-plus fa-sm text-white-50"></i> Nouvelle Enquete</a>       
                             </div>
 
                             <div className="row">
 
-<div className="col-xl-4 col-md-6 mb-4">
-                <div className="card border-left-primary shadow h-100 py-2">
+			<div className="col-xl-4 col-md-6 mb-4">
+                <div className="card border-left-danger shadow h-100 py-2">
                     <div className="card-body">
                         <div className="row no-gutters align-items-center">
                             <div className="col mr-2">
-                                <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                <div className="text-xs font-weight-bold  text-uppercase mb-1" style={{ color: "red" }}>
                                     Resultat glabal de toutes vos Enquetes </div>
                                 <div className="h5 mb-0 font-weight-bold text-gray-800">4,0</div>
                             </div>
@@ -212,12 +212,12 @@ function Dashboard() {
                 </div>
             </div>
             <div className="col-xl-4 col-md-6 mb-4">
-                <div className="card border-left-primary shadow h-100 py-2">
+                <div className="card border-left-danger shadow h-100 py-2">
                     <div className="card-body">
                         <div className="row no-gutters align-items-center">
                             <div className="col mr-2">
-                                <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Nombre D'enquetes </div>
+                                <div className="text-xs font-weight-bold text-primary text-uppercase mb-1" style={{ color: "red" }}>
+                                Nombre D'enquete(s) </div>
                                 <div className="h5 mb-0 font-weight-bold text-gray-800">{Enquetelength.length}</div>
                             </div>
                         
@@ -240,11 +240,11 @@ function Dashboard() {
                 </div>
             </div> */}
             <div className="col-xl-4 col-md-6 mb-4">
-                <div className="card border-left-primary shadow h-100 py-2">
+                <div className="card border-left-danger shadow h-100 py-2">
                     <div className="card-body">
                         <div className="row no-gutters align-items-center">
                             <div className="col mr-2">
-                                <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                <div className="text-xs font-weight-bold text-primary text-uppercase mb-1" style={{ color: "red" }}>
                                 Resultat de l'enquete encours</div>
                                 <div className="h5 mb-0 font-weight-bold text-gray-800">{data.results}</div>
                             </div>
@@ -257,7 +257,7 @@ function Dashboard() {
 </div>
 <div className="card shadow mb-4">
         <div className="card-header py-3">
-            <h6 className="m-0 font-weight-bold text-primary">Détails enquête en cours : {enquete.nom}</h6>
+            <h6 className="m-0 font-weight-bold text-primary" style={{ color: "red" }}>Détails enquête en cours : {enquete.nom}</h6>
         </div>
         <div className="card-body">
             <div className="table-responsive">
@@ -306,12 +306,12 @@ function Dashboard() {
 
 <div className="card shadow mb-4">
                 <div className="card-header py-3">
-                    <h6 className="m-0 font-weight-bold text-primary">Recommendation</h6>
+                    <h6 className="m-0 font-weight-bold " style={{ color: "red" }}>Recommendation Recent</h6>
                 </div>
                 <div className="card-body">
-                    <p>Consulter touts les Recommendation, commentaire et avis de vos client ici. Cette information permet de constater le résultat de toutes les enquetes effectuées par votre entreprise</p>
+                    <p>{data.commentaire}</p>
                     
-                    <a href="/pages/dashboard/enquete/results" className="btn btn-primary">Consulter</a>
+                    <a href="/pages/dashboard/enquete/results" className="btn btn-success">Consulter les autres commentaires</a>
 
                 </div>
 </div>

@@ -89,7 +89,7 @@ export default class SignUp extends Component {
     <a className="navbar-brand" href="/">
       <img src={Logo} alt="" width="65" height="55" className="d-inline-block align-text-top"/>
     </a>
-        <ol className="breadcrumb d-flex">
+        {/* <ol className="breadcrumb d-flex">
 								<li className="breadcrumb-item">
 									<Link to="/login">Login</Link>
 								</li>
@@ -98,7 +98,7 @@ export default class SignUp extends Component {
 										Register
 									</Link>
 								</li>
-							</ol>
+			</ol> */}
   </div>
 </nav>
 
@@ -116,7 +116,7 @@ export default class SignUp extends Component {
 						className="bg-light mt-2 p-3"
 						style={{ borderRadius: "20px" }}
 					>
-						<h4 className="text-primary text-center">
+						<h4 className="text-center" style={{ color: "red" }}>
 							Créer votre compte pour débuter dans Customer service
 						</h4>
 						<div className="row mb-3 mt-5">
@@ -275,7 +275,7 @@ export default class SignUp extends Component {
 						<div className="d-flex justify-content-center col-12 my-3">
 							<button
 								type="submit"
-								className="btn btn-primary px-4"
+								className="btn btn-success px-4"
 							>
 								Sign Up
 							</button>
