@@ -193,7 +193,7 @@ function Question() {
 		});
 	};
 
-	const checkQuestion = (questionId) => {
+	const checkQuestion = (enqueteId, questionId) => {
 		fetch(`https://customer-space.herokuapp.com/api/question/${questionId}`, {
 			headers: {
 				Authorization: `Bearer ${JSON.parse(
