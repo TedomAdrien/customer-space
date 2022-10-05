@@ -408,7 +408,7 @@ function EditEnquete() {
 															</div>
 														)}
 													</Popup>
-													<Popup
+													{/* <Popup
 														trigger={
 															<button className="btn btn-outline-danger btn-fw">
 																{" "}
@@ -442,7 +442,7 @@ function EditEnquete() {
 																</button>
 															</div>
 														)}
-													</Popup>
+													</Popup> */}
 												</td>
 													<td>
 													<div className="btn btn-primary">
