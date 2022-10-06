@@ -287,7 +287,7 @@ function EditEnquete() {
         
 							<Popup
 		trigger={
-			<button className="btn btn-primary mb-4">
+			<button className="btn btn-success mb-4">
 				{" "}
 				Ajouter une Enquete{" "}
 			</button>
@@ -324,13 +324,13 @@ function EditEnquete() {
 					
 					
 					<button
-						style={{ marginLeft: "10px" }}
-						className="btn btn-primary"
+						
+						className="btn btn-danger"
 						onClick={close}
 					>
 						Fermer
 					</button>
-					<button type="submit" className="btn btn-success">
+					<button type="submit" className="btn btn-success" style={{ marginLeft: "10px" }}>
 						Ajouter
 					</button>
 				</form>
@@ -342,23 +342,15 @@ function EditEnquete() {
 								<table className="table table-striped">
 									<thead>
 										<tr>
-											<th> Enquete <br/> encours</th>
 											<th> Nom </th>
 											<th> Action </th>
-											<th> Question </th>
+											<th> Selectionener <br/>l'enquete</th>
+											<th> Questionnaire </th>
 										</tr>
 									</thead>
 									<tbody>
 										{enqueteList.map((val) => (
 											<tr key={val._id}>
-												<td>
-													<div
-														className="form-check text-center"
-														title="Switcher de ferme"
-													>
-														{rendered(val._id)}
-													</div>
-												</td>
 												<td>{val.nom}</td>
 												<td>
 													<Popup
@@ -385,7 +377,10 @@ function EditEnquete() {
 																		className="form-control form-perso"
 																	/>
 																	<button
-																		className="btn btn-outline-success btn-fw"
+																	style={{
+																		marginLeft: "10px",
+																	}}
+																		className="btn btn-success btn-fw"
 																		onClick={() => {
 																			updateEnqueteNom(
 																				val._id
@@ -400,7 +395,7 @@ function EditEnquete() {
 																	style={{
 																		marginLeft: "10px",
 																	}}
-																	className="btn btn-primary"
+																	className="btn btn-danger"
 																	onClick={close}
 																>
 																	Fermer
@@ -444,10 +439,18 @@ function EditEnquete() {
 														)}
 													</Popup> */}
 												</td>
+												<td>
+													<div
+														className="form-check text-center"
+														title="Switcher de ferme"
+													>
+														{rendered(val._id)}
+													</div>
+												</td>
 													<td>
 													<div className="btn btn-primary">
 													<Link to="/pages/dashboard/enquete/question">
-														<span className="btnO btn-primary px-3">Voir</span>
+														<span className="btnO btn-primary px-3">Consulter</span>
 													</Link>
 													
 													</div>

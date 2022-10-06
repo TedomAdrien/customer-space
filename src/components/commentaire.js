@@ -49,7 +49,7 @@ function Commentaire() {
 						<div className="sidebar-brand-icon rotate-n-15">
 							<i className="fas fa-laugh-wink"></i>
 						</div>
-						<div className="sidebar-brand-text mx-3">Customer Services</div>
+						<div className="sidebar-brand-text mx-3">Customer Space</div>
 					</a>
 					<hr className="sidebar-divider my-0"/>
 					<li className="nav-item active">
@@ -95,6 +95,11 @@ function Commentaire() {
 														<DropdownToggle className="pr-0" nav>
 															<ul className="navbar-nav navbar-nav-right">
 																<Media className="align-items-center">
+																	<Media className="ml-2 d-none d-lg-block">
+																		<span className="mb-0 text-sm font-weight-bold"  style={{ color: "red" }}>
+																			{profil.nom}
+																		</span>
+																	</Media>
 																	<li className="nav-item nav-profile dropdown">
 																		<a
 																			className="nav-link dropdown-toggle"
@@ -106,11 +111,6 @@ function Commentaire() {
 																			src={ Profil} alt="photo de profil"/>
 																		</a>
 																	</li>
-																	<Media className="ml-2 d-none d-lg-block">
-																		<span className="mb-0 text-sm font-weight-bold">
-																			{profil.nom}
-																		</span>
-																	</Media>
 																</Media>
 															</ul>
 														</DropdownToggle>
@@ -162,7 +162,7 @@ function Commentaire() {
 
           <div className="container-fluid">
               <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                  <h1 className="h3 mb-0 text-gray-800">Commentaire</h1>
+                  <h1 className="h3 mb-0 text-gray-800">Commentaire(s)</h1>
               </div>
           </div>
           <div className="container px-3 my-5 clearfix">
@@ -172,10 +172,16 @@ function Commentaire() {
               <div className="card-body">
                   <div className="table-responsive">
                     <table className="table table-bordered m-0">
-       <thead>
+       					<thead>
                         <tr>
-                       <th className="text-center py-3 px-4">Commentaire enquete encours</th>
+                       <th className="text-center py-3 px-4">Commentaire de l'enquete encours</th>
                         </tr>
+						<thead>
+                        <tr>
+                            <th>Commenetaire</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
                       </thead>
                       <tbody>
                       <tr>
@@ -183,6 +189,11 @@ function Commentaire() {
                              {data.commentaire}
                          </td>
                        </tr>
+                      {/* <tr>
+                          <td className="p-10">
+                             {data.date}
+                         </td>
+                       </tr> */}
               </tbody>
                     </table>
                   </div>
@@ -196,7 +207,7 @@ function Commentaire() {
       <footer className="sticky-footer bg-white">
           <div className="container my-auto">
               <div className="copyright text-center my-auto">
-                  <span>Copyright &copy; Your Website 2021</span>
+			  <span>Copyright &copy; ALLHCorp 2022</span>
               </div>
           </div>
       </footer>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../components/assets/styles/profil.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import face17 from "../components/assets/images/faces/face17.jpg";
+import Profil from "../components/assets/img/undraw_profile.svg"
 import Axios from "axios";
 
 
@@ -78,7 +78,7 @@ const Profil = () => {
 									<div className="card-body">
 										<div className="d-flex flex-column align-items-center text-center">
 											<img
-												src={face17}
+												src={Profil}
 												alt="Admin"
 												className="rounded-circle"
 												width="150"
