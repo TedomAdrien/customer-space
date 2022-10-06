@@ -351,7 +351,7 @@ function Dashboard() {
                        </tr>
               </tbody>
                     </table>
-                    <a href="/pages/dashboard/enquete/results" className="btn btn-success mt-3">Consulter les autres commentaires</a>
+                    <a href="/pages/dashboard/enquete/results" className="btn btn-success mt-3 mb-2">Consulter les autres commentaires</a>
                   </div>
 </div>
 </div>

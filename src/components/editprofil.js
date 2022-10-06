@@ -66,7 +66,7 @@ const EditProfil = () => {
 		 							aria-label="breadcrumb"
 		 							className="main-breadcrumb"
 		 						>
-		 							<ol className="breadcrumb">
+		 							<ol className="breadcrumb mt-2">
 		 								<li className="breadcrumb-item">
 		 									<Link to="/">Acceuil</Link>
 		 								</li>
