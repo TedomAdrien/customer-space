@@ -342,14 +342,13 @@ function Dashboard() {
                           <td className="p-10">
                              {data.commentaire}
                          </td>
-                       </tr>
-                      <tr>
-                          <td className="p-10">
+						 <td className="p-10">
 						    {moment(new Date(data.created_at)).format(
 										"DD/MM/YYYY-H:mm:ss"
 									)}
                          </td>
                        </tr>
+                      
               </tbody>
                     </table>
                     <a href="/pages/dashboard/enquete/results" className="btn btn-success mt-3 mb-2">Consulter les autres commentaires</a>
