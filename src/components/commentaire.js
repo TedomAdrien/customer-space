@@ -194,18 +194,16 @@ function Commentaire() {
           <div className="card">
               <div className="card-body">
                   <div className="table-responsive">
+                       <th className="text-center py-3 px-4"></th>
+					   <h6 className="m-0 font-weight-bold " style={{ color: "red" }}>Commentaire de l'enquete encours</h6>
                     <table className="table table-bordered m-0">
-       					<thead>
-                        <tr>
-                       <th className="text-center py-3 px-4">Commentaire de l'enquete encours</th>
-                        </tr>
+
 						<thead>
                         <tr>
                             <th>Commenetaire</th>
                             <th>Date</th>
                         </tr>
                     </thead>
-                      </thead>
                       <tbody>
                       <tr>
                           <td className="p-10">

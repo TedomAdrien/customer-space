@@ -165,7 +165,7 @@ const Profil = () => {
 											</div>
 										</div>
 										<hr />
-										{/* <div className="row">
+										<div className="row">
 											<div className="col-sm-12">
 												<Link
 													className="btn btn-outline-primary float-right"
@@ -174,7 +174,7 @@ const Profil = () => {
 													Modifier
 												</Link>
 											</div>
-										</div> */}
+										</div>
 									</div>
 								</div>
 

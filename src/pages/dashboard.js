@@ -128,7 +128,6 @@ function Dashboard() {
     					<div id="content">
 					        <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 							    <button id="sidebarToggleTop" className="btn btn-link d-md-none rounded-circle mr-3">
-									<i className="fa fa-bars"></i>
 								</button>
             						<ul className="navbar-nav ml-auto">
 										<div className="topbar-divider d-none d-sm-block"></div>
@@ -212,7 +211,7 @@ function Dashboard() {
 							<div className="container-fluid">
                             <div className="d-sm-flex align-items-center justify-content-between mb-4">
                                 <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
-                                <a href="dashboard/enquete" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                <a href="dashboard/enquete" className="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
                                         className="fas fa-plus fa-sm text-white-50"></i> Nouvelle Enquete</a>       
                             </div>
 
@@ -350,7 +349,7 @@ function Dashboard() {
                        </tr> */}
               </tbody>
                     </table>
-                    <a href="/pages/dashboard/enquete/results" className="btn btn-success">Consulter les autres commentaires</a>
+                    <a href="/pages/dashboard/enquete/results" className="btn btn-success mt-3">Consulter les autres commentaires</a>
                   </div>
 </div>
 </div>
