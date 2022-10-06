@@ -24,6 +24,7 @@ const EditProfil = () => {
 	const getProfilUser = () =>{
 		Axios.get(`https://customer-space.herokuapp.com/api/auth/show/${userId}`)
 			.then((response) => {
+				console.log(response.data);
 				setProfil(response.data);
 			})
 		
