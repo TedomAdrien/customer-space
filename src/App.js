@@ -8,7 +8,7 @@ import SearchPage from "./pages/searchPage"
 import SignUp from "./pages/signup";
 import Dashboard from "./pages/dashboard";
 import Profil from "./pages/profil";
-
+import EditProfil from "./components/editprofil";
 import Enquete from "./components/editenquete";
 import Question from "./components/question";
 // import Form from "./pages/form"
@@ -32,7 +32,7 @@ function App() {
               <Route path="/signup" element={<SignUp/>}/>
               <Route path="/pages/dashboard" element={<Dashboard/>}/>
               <Route path="/pages/dashboard/userprofil" element={<Profil/>}/>
-              {/* <Route path="/pages/dashboard/userprofil/update" element={<EditProfil/>}/> */}
+              <Route path="/pages/dashboard/userprofil/update" element={<EditProfil/>}/>
               <Route path="/pages/dashboard/enquete" element={<Enquete/>}/>
               <Route path="/pages/dashboard/enquete/question" element={<Question/>}/>
               <Route path="/pages/dashboard/enquete/results" element={<Results/>}/>
