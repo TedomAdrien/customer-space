@@ -12,6 +12,17 @@ const Profil = () => {
 	const newPassword = useState([]);
 	const confirmNewPassword = useState([]);
 
+	const  componentDidMount = () => {
+		//s'il n'est pas connecter on le renvoie au login
+		if (!JSON.parse(window.localStorage.getItem("userToken"))) {
+			window.location.href = "/";
+		 }
+		}
+		
+	useEffect(() => {
+        componentDidMount();
+    }, [])
+
 
 	const getProfilUser = () =>{
 		Axios.get(`https://customer-space.herokuapp.com/api/auth/show/${userId}`)

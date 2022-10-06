@@ -14,6 +14,23 @@ function Commentaire() {
     // const enqueteId = JSON.parse(window.localStorage.getItem("enqueteId"));
     const questionId = JSON.parse(window.localStorage.getItem("questionId"));
     const [data, setQuestionList] = useState([]);
+
+	const  componentDidMount = () => {
+		//s'il n'est pas connecter on le renvoie au login
+		if (!JSON.parse(window.localStorage.getItem("userToken"))) {
+			window.location.href = "/";
+		 }
+		}
+		
+	useEffect(() => {
+        componentDidMount();
+    }, [])
+
+	const logout = () => {
+		window.localStorage.clear();
+		window.location.reload();
+	}
+
 	
    
 
@@ -151,6 +168,12 @@ function Commentaire() {
 																<span>Mes Enquetes</span>
 															</DropdownItem>
 															<DropdownItem divider />
+															<DropdownItem
+																onClick={() =>logout()}
+															>
+																<i className="ni ni-settings-gear-65" />
+																<span>Logout</span>
+															</DropdownItem>
 
 														</DropdownMenu>
 													</UncontrolledDropdown>

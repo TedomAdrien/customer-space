@@ -16,6 +16,23 @@ function EditEnquete() {
 	const [nom, setNom] = useState("");
 	const [newNom, setNewNom] = useState("");
 
+	const  componentDidMount = () => {
+		//s'il n'est pas connecter on le renvoie au login
+		if (!JSON.parse(window.localStorage.getItem("userToken"))) {
+			window.location.href = "/";
+		 }
+		}
+		
+	useEffect(() => {
+        componentDidMount();
+    }, [])
+
+	const logout = () => {
+		window.localStorage.clear();
+		window.location.reload();
+	}
+
+
 
 	const getProfilUser = () => {
 		Axios.get(`https://customer-space.herokuapp.com/api/auth/show/${userId}`)
@@ -273,6 +290,12 @@ function EditEnquete() {
 																<span>Mes Enquetes</span>
 															</DropdownItem>
 															<DropdownItem divider />
+															<DropdownItem
+																onClick={() =>logout()}
+															>
+																<i className="ni ni-settings-gear-65" />
+																<span>Logout</span>
+															</DropdownItem>
 														</DropdownMenu>
 													</UncontrolledDropdown>
 												</Nav>

@@ -11,6 +11,22 @@ function Question() {
 	const userId = JSON.parse(window.localStorage.getItem("userId"));
 	const [profil, setProfil] = useState([]);
 	const [enqueteId, setenqueteId] = useState(JSON.parse(window.localStorage.getItem("enqueteId")));
+	const  componentDidMount = () => {
+		//s'il n'est pas connecter on le renvoie au login
+		if (!JSON.parse(window.localStorage.getItem("userToken"))) {
+			window.location.href = "/";
+		 }
+		}
+		
+	useEffect(() => {
+        componentDidMount();
+    }, [])
+
+	const logout = () => {
+		window.localStorage.clear();
+		window.location.reload();
+	}
+
 
 	const [status, setStatus] = useState(1);
 	const [question1, setQuestion1] = useState("");
@@ -360,6 +376,12 @@ function Question() {
 																<span>Mes Enquetes</span>
 															</DropdownItem>
 															<DropdownItem divider />
+															<DropdownItem
+																onClick={() =>logout()}
+															>
+																<i className="ni ni-settings-gear-65" />
+																<span>Logout</span>
+															</DropdownItem>
 														</DropdownMenu>
 													</UncontrolledDropdown>
 												</Nav>
