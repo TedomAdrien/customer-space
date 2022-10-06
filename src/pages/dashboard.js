@@ -345,7 +345,7 @@ function Dashboard() {
                        </tr>
                       <tr>
                           <td className="p-10">
-						    {moment(new Date(val.created_at)).format(
+						    {moment(new Date(data.created_at)).format(
 										"DD/MM/YYYY-H:mm:ss"
 									)}
                          </td>
