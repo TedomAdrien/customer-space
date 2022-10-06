@@ -237,7 +237,7 @@ function Dashboard() {
                     <div className="card-body">
                         <div className="row no-gutters align-items-center">
                             <div className="col mr-2">
-                                <div className="text-xs font-weight-bold text-primary text-uppercase mb-1" style={{ color: "red" }}>
+                                <div className="text-xs font-weight-bold text-uppercase mb-1" style={{ color: "red" }}>
                                 Nombre D'enquete(s) </div>
                                 <div className="h5 mb-0 font-weight-bold text-gray-800">{Enquetelength.length}</div>
                             </div>
@@ -265,7 +265,7 @@ function Dashboard() {
                     <div className="card-body">
                         <div className="row no-gutters align-items-center">
                             <div className="col mr-2">
-                                <div className="text-xs font-weight-bold text-primary text-uppercase mb-1" style={{ color: "red" }}>
+                                <div className="text-xs font-weight-bold text-uppercase mb-1" style={{ color: "red" }}>
                                 Resultat de l'enquete encours</div>
                                 <div className="h5 mb-0 font-weight-bold text-gray-800">{data.results}</div>
                             </div>
@@ -278,7 +278,7 @@ function Dashboard() {
 </div>
 <div className="card shadow mb-4">
         <div className="card-header py-3">
-            <h6 className="m-0 font-weight-bold text-primary" style={{ color: "red" }}>Détails enquête en cours : {enquete.nom}</h6>
+            <h6 className="m-0 font-weight-bold" style={{ color: "red" }}>Détails enquête en cours : {enquete.nom}</h6>
         </div>
         <div className="card-body">
             <div className="table-responsive">
@@ -329,14 +329,31 @@ function Dashboard() {
                 <div className="card-header py-3">
                     <h6 className="m-0 font-weight-bold " style={{ color: "red" }}>Recommendation Recent</h6>
                 </div>
-                <div className="card-body">
-                    <p>{data.commentaire}</p>
-                    
+                <div className="table-responsive">
+                    <table className="table table-bordered m-0">
+						<thead>
+                        <tr>
+                            <th>Commenetaire</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                      <tbody>
+                      <tr>
+                          <td className="p-10">
+                             {data.commentaire}
+                         </td>
+                       </tr>
+                      {/* <tr>
+                          <td className="p-10">
+                             {data.date}
+                         </td>
+                       </tr> */}
+              </tbody>
+                    </table>
                     <a href="/pages/dashboard/enquete/results" className="btn btn-success">Consulter les autres commentaires</a>
-
-                </div>
+                  </div>
 </div>
-							</div>
+</div>
         
 							
 
