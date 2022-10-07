@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "reactjs-popup/dist/index.css";
 import "../components/assets/styles/form.css";
+import { toast } from 'react-toastify';
 import Logo from "../components/assets/images/logo.png"
 
 function Form() {
@@ -34,10 +35,12 @@ function Form() {
                             JSON.stringify(dat._id)
                         );
                         setResult(dat)
+                        toast.success("Nous allons vous redireger vers le questionnaire du restuarant");
                         window.location.href="avisclient/" + encodeURIComponent(userName);
                         // window.location.href="avisclient/";
                     } else{
-                        alert("L'utilisateur n'exixtes pas");
+                        // alert("L'utilisateur n'exixtes pas");
+                        toast.error();("L'utilisateur n'exixtes pas");
                     }
                     });
         }

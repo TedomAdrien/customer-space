@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import { toast } from 'react-toastify';
 import "reactjs-popup/dist/index.css";
 import "../components/assets/styles/form.css";
 
@@ -20,7 +21,7 @@ function AvisClient() {
     const addReponse = (e) => {
         e.preventDefault();
         if (reponse1 > 5 || reponse2 > 5 || reponse3 > 5 || reponse4 > 5 || reponse5 > 5)
-            alert("Les notes des reponses ne doivent pas etre surperieur a 5");
+           toast.error("Les notes des reponses ne doivent pas etre surperieur a 5");
         else {
             fetch("https://customer-space.herokuapp.com/api/reponse", {
                 method: "POST",
@@ -45,9 +46,11 @@ function AvisClient() {
                 .then((res) => res.json())
                 .then((data) => {
                     if (data.message) {
+                        toast.success("Merci d'avoir participer a notre quiz a la prochaine");
                         window.location.href = "../clientredirection";
                     } else {
-                        alert("Echec lors de l'envoi de vos reponses");
+                        // alert("");
+                        toast.error("Echec lors de l'envoi de vos reponses");
                     }
                 });
         };

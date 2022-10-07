@@ -1,4 +1,6 @@
 import React from "react";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -39,6 +41,7 @@ function App() {
               <Route path="/clientredirection" element={<Client/>}/>
             </Routes>
           </div>
+          <ToastContainer autoClose={5000}/>
     </Router>
   );
 }

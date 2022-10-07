@@ -35,6 +35,7 @@ function Dashboard() {
 	const logout = () => {
 		window.localStorage.clear();
 		window.location.reload();
+		toast.success("Aurevoir et revener vite");
 	}
 
 
@@ -84,7 +85,7 @@ function Dashboard() {
     }, [])
 
     const getResult = () => {
-		Axios.get(`https://customer-space.herokuapp.com/app/enquete/results/${userId}`).then(
+		Axios.get(`https://customer-space.herokuapp.com/app/enquete/results`).then(
 			(response) => {
 				console.log(response.data);
 				setResultGlobal(response.data);

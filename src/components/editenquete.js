@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
 import Popup from "reactjs-popup";
+import { toast } from 'react-toastify';
 import "reactjs-popup/dist/index.css";
 import {DropdownMenu, DropdownItem, UncontrolledDropdown, DropdownToggle, Nav, Media, } from "reactstrap";
 import Profil from "../components/assets/img/undraw_profile.svg"
@@ -30,6 +31,7 @@ function EditEnquete() {
 	const logout = () => {
 		window.localStorage.clear();
 		window.location.reload();
+		toast.success("Aurevoir et revener vite");
 	}
 
 
@@ -48,7 +50,8 @@ function EditEnquete() {
 	const addEnquete = (e) => {
 	e.preventDefault();
 		if (nom === "")
-			alert("Le champ ne doit pas etre vide");
+			toast.success("Le champ ne doit pas etre vide");
+			// alert("Le champ ne doit pas etre vide");
 		else {
 			fetch("https://customer-space.herokuapp.com/app/enquete", {
 				method: "POST",
@@ -68,7 +71,8 @@ function EditEnquete() {
 				.then((res) => res.json())
 				.then((data) => {
 					if (data.message) {
-						alert("Enquete créée avec succès");
+						toast.success("Enquete créée avec succès");
+						// alert("Enquete créée avec succès");
 						//initialiser le enqueteId pour les requette qui en aurons besoin
 						fetch("https://customer-space.herokuapp.com/app/enquete", {
 							headers: {
@@ -87,7 +91,8 @@ function EditEnquete() {
 							});
 						});
 					} else {
-						alert("Echec lors de la création de votre Enquete");
+						toast.error("Echec lors de la création de votre Enquete");
+						// alert("Echec lors de la création de votre Enquete");
 					}
 				});
 		}
@@ -100,21 +105,27 @@ function EditEnquete() {
 			}
 		);
 	};
+
 	useEffect(() => {
         getEnquetes();
     }, [])
 
 	const updateEnqueteNom = (id) => {
 		if (newNom ==="") {
-			alert("Le champs ne doit pas être vide");
+			// alert("Le champs ne doit pas être vide");
+			toast.success("Le champs ne doit pas être vide");
 		} else {
 			Axios.put(`https://customer-space.herokuapp.com/app/enquete/${id}`, {
 				nom: newNom,
 				_id: id,
 			}).then((response) => {
 				getEnquetes();
-				if (response.status === 201) alert(response.data.message);
-				else alert("Verifiez vos champs et recommencez");
+				if (response.status === 201) 
+				// alert(response.data.message);
+				toast.success("La modification a ete modifier avec success");
+				else 
+				// alert("Verifiez vos champs et recommencez");
+				toast.error("Verifiez vos champs et recommencez");
 			});
 		}
 	};
@@ -128,11 +139,19 @@ function EditEnquete() {
 						return val._id !== id;
 					})
 				);
-				if (response.status === 200) alert(response.data.message);
-				else alert("Verifiez vos champs et recommencez");
+				if (response.status === 200) 
+				// alert(response.data.message);
+				toast.success("Votre enquete a ete modifier avec success");
+				else 
+				// alert("Verifiez vos champs et recommencez");
+				toast.error("Verifiez vos champs et recommencez");
 			}
 		);
 	};
+
+	useEffect(() => {
+        deleteEnquete();
+    }, [])
 
 	const checkEnquete = (enqueteId) => {
 		fetch(`https://customer-space.herokuapp.com/app/enquete/${enqueteId}`, {
@@ -147,7 +166,8 @@ function EditEnquete() {
 					"enqueteId",
 					JSON.stringify(enquete._id)
 				);
-				alert("Changement de enquete reussie");
+				toast.success("Changement de enquete reussie");
+				// alert("Changement de enquete reussie");
 			});
 		});
 	};

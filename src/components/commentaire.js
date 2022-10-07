@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import "reactjs-popup/dist/index.css";
 import moment from "moment";
+import { toast } from 'react-toastify';
 import "../components/assets/styles/form.css";
 import { Link } from "react-router-dom";
 import {DropdownMenu, DropdownItem, UncontrolledDropdown, DropdownToggle, Nav, Media, } from "reactstrap";
@@ -30,6 +31,7 @@ function Commentaire() {
 	const logout = () => {
 		window.localStorage.clear();
 		window.location.reload();
+		toast.success("Aurevoir et revener vite");
 	}
 
 	

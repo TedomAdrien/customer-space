@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../components/assets/styles/profil.css";
+import { toast } from 'react-toastify';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Profilimage from "../components/assets/img/undraw_profile.svg"
 import Axios from "axios";
@@ -47,15 +48,21 @@ const Profil = () => {
 			})
 				.then((response) => {
 					if (response.status === 201) {
-						alert(response.data.message);
+						toast.success("Votre mot de passe modifier avec success");
+						// alert(response.data.message);
 						window.location.href = "./";
 					}
 				})
 				.catch((error) => {
-					alert(error.response.data.message);
+					toast.error("une erreur c'est produite lors de la modification de votre compte");
+					// alert(error.response.data.message);
 				});
 		}
 	}
+	useEffect(() => {
+        updatePassword();
+    }, [])
+
 	return (
 			<div className="profil">
 				
