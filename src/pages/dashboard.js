@@ -84,7 +84,7 @@ function Dashboard() {
     }, [])
 
     const getResult = () => {
-		Axios.get(`https://customer-space.herokuapp.com/app/enquete/${userId}`).then(
+		Axios.get(`https://customer-space.herokuapp.com/app/enquete/results/${userId}`).then(
 			(response) => {
 				console.log(response.data);
 				setResultGlobal(response.data);
