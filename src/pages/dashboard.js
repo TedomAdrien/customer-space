@@ -74,6 +74,7 @@ function Dashboard() {
     const getEnquetes = () => {
 		Axios.get(`https://customer-space.herokuapp.com/app/enquete/${enqueteId}`).then(
 			(response) => {
+				console.log(response.data);
 				setEnqueteList(response.data);
 			}
 		);
@@ -83,7 +84,7 @@ function Dashboard() {
     }, [])
 
     const getResult = () => {
-		Axios.get(`https://customer-space.herokuapp.com/app/enquete/result/${userId}`).then(
+		Axios.get(`https://customer-space.herokuapp.com/app/enquete/${userId}`).then(
 			(response) => {
 				console.log(response.data);
 				setResultGlobal(response.data);
