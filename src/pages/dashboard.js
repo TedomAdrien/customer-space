@@ -18,6 +18,7 @@ function Dashboard() {
 	const [data, setQuestionList] = useState([]);
     const [enquete, setEnqueteList] = useState([]);
 	const [Enquetelength, setEnqueteLength] = useState([]);
+	const [result, setResultGlobal] = useState([]);
 
 
 	const  componentDidMount = () => {
@@ -79,6 +80,17 @@ function Dashboard() {
 	};
 	useEffect(() => {
         getEnquetes();
+    }, [])
+
+    const getResult = () => {
+		Axios.get(`https://customer-space.herokuapp.com/app/enquete/result/${userId}`).then(
+			(response) => {
+				setResultGlobal(response.data);
+			}
+		);
+	};
+	useEffect(() => {
+        getResult();
     }, [])
 
 
@@ -225,7 +237,7 @@ function Dashboard() {
                             <div className="col mr-2">
                                 <div className="text-xs font-weight-bold  text-uppercase mb-1" style={{ color: "red" }}>
                                     Resultat glabal de toutes vos Enquetes </div>
-                                <div className="h5 mb-0 font-weight-bold text-gray-800">4,0</div>
+                                <div className="h5 mb-0 font-weight-bold text-gray-800">{ result }</div>
                             </div>
                             
                         </div>

@@ -78,7 +78,7 @@ export default class Login extends Component {
 								</li>
 			</ol> */}
   </div>
-</nav>
+  					</nav>
 				<div className="container col-12 mt-2 p-4">
 					<h1
 						className="mt-2 text-center"
