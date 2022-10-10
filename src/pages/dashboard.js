@@ -80,6 +80,7 @@ function Dashboard() {
 			}
 		);
 	};
+	
 	useEffect(() => {
         getEnquetes();
     }, [])
