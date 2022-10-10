@@ -85,22 +85,15 @@ function Dashboard() {
     }, [])
 
     const getResult = () => {
-		Axios.get(`https://customer-space.herokuapp.com/app/enquete/results`).then(
+		Axios.get(`https://customer-space.herokuapp.com/api/result`).then(
 			(response) => {
-				console.log(response.data);
-				setResultGlobal(response.data);
+				setResultGlobal(response.data.total);
 			}
 		);
 	};
 	useEffect(() => {
         getResult();
     }, [])
-
-
-	
-
-	
-	
 
 	return (
 		<div>
